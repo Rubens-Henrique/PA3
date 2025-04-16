@@ -1,0 +1,714 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Apr 16 15:45:49 2025
+
+# Variables
+
+# makefile (from 'Makefile', line 21)
+OUTPUT = good.output bad.output
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 10)
+SRC = cool.y cool-tree.handcode.h good.cl bad.cl README
+# makefile (from 'Makefile', line 6)
+AR = ar
+# environment
+PULSE_SERVER = unix:/mnt/wslg/PulseServer
+# environment
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
+# environment
+VSCODE_CWD = /mnt/c/Users/athem/AppData/Local/Programs/Microsoft VS Code
+# makefile (from 'Makefile', line 16)
+LIBS = lexer semant cgen
+# makefile (from 'Makefile', line 30)
+FLEX = flex ${FFLAGS}
+# default
+MAKE_COMMAND := make
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /root/PA3
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+LANG = C
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile (from 'Makefile', line 15)
+HGEN = cool-parse.h
+# makefile
+CURDIR := /root/PA3
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+ 
+# default
+.SHELLFLAGS := -c
+# environment
+WSL2_GUI_APPS_ENABLED = 1
+# environment
+WAYLAND_DISPLAY = wayland-0
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'cool-parse.d', line 1)
+MAKEFILE_LIST := Makefile parser-phase.d utilities.d stringtab.d dumptype.d tree.d cool-tree.d tokens-lex.d handle_flags.d cool-parse.d
+# automatic
+@F = $(notdir $@)
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 7)
+ARCHIVE_NEW = -cr
+# makefile (from 'Makefile', line 8)
+RANLIB = ar -qs
+# automatic
+*F = $(notdir $*)
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/0/bus
+# makefile (from 'Makefile', line 5)
+LIB = -L/usr/lib -lfl
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/root/.vscode-server/bin/4949701c880d4bdb949e3c0e6b400288da7f474b/out/nls.messages.json","locale":"en","availableLanguages":{}}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 20)
+OBJS = ${CFIL:.cc=.o}
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 26)
+BFLAGS = -d -v -y -b cool --debug -p cool_yy
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /root/.vscode-server/bin/4949701c880d4bdb949e3c0e6b400288da7f474b/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/MinGW/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.7.7-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/scr/flutter/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/altera/91sp2/quartus/bin:/mnt/c/Users/athem/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/athem/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/athem/AppData/Roaming/npm:/mnt/c/Users/athem/AppData/Local/Pub/Cache/bin:/snap/bin
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+NAME = Athem
+# makefile (from 'Makefile', line 14)
+CGEN = cool-parse.cc
+# makefile (from 'Makefile', line 13)
+TSRC = myparser mycoolc cool-tree.aps
+# environment
+HOSTTYPE = x86_64
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:
+# automatic
++F = $(notdir $+)
+# environment
+WSL_INTEROP = /run/WSL/312_interop
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = root
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/athem/.vscode/extensions/ms-vscode-remote.remote-wsl-0.99.0
+# makefile
+.DEFAULT_GOAL := source
+# makefile (from 'Makefile', line 18)
+HFIL = cool-tree.h cool-tree.handcode.h 
+# environment
+DISPLAY = :0
+# environment
+USER = root
+# default
+MAKE_VERSION := 4.3
+# makefile (from 'Makefile', line 32)
+DEPEND = ${CC} -MM ${CPPINCLUDE}
+# makefile (from 'Makefile', line 2)
+ASSN = 3
+# makefile (from 'Makefile', line 19)
+LSRC = Makefile
+# makefile (from 'Makefile', line 11)
+CSRC = parser-phase.cc utilities.cc stringtab.cc dumptype.cc tree.cc cool-tree.cc tokens-lex.cc  handle_flags.cc 
+# environment
+_ = /root/.vscode-server/bin/4949701c880d4bdb949e3c0e6b400288da7f474b/node
+# environment
+XDG_RUNTIME_DIR = /run/user/0/
+# makefile (from 'Makefile', line 29)
+CFLAGS = -g -Wall -Wno-unused -DDEBUG ${CPPINCLUDE}
+# makefile (from 'Makefile', line 3)
+CLASS = compiladores
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-c0dac8bd-5b9c-4144-b9a8-b7c26a4a0f31.sock
+# makefile (from 'Makefile', line 31)
+BISON = bison ${BFLAGS}
+# environment
+HOME = /root
+# makefile (from 'Makefile', line 24)
+CPPINCLUDE = -I. -I${CLASSDIR}/include/PA${ASSN} -I${CLASSDIR}/src/PA${ASSN}
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TERM = xterm-256color
+# makefile (from 'Makefile', line 17)
+CFIL = ${CSRC} ${CGEN}
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 4)
+CLASSDIR = /var/tmp/cool
+# default
+SUFFIXES := 
+# environment
+WSL_DISTRO_NAME = Ubuntu
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 28)
+CC = g++
+# environment
+VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# variable set hash-table stats:
+# Load=94/1024=9%, Rehash=0, Collisions=7/162=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2080, inode 48143): 46 files, no impossibilities.
+
+# 46 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+ 
+
+%.d: %.cc Makefile
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+/var/tmp/cool/include/PA3/copyright.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+cool-tree.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-15 20:52:59.270593522
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+tokens-lex.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2011-06-18 00:22:02
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+cool-parse.d: cool-parse.cc Makefile cool-parse.cc /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h cool-tree.handcode.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h cool.tab.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'cool-parse'
+#  Last modified 2025-04-16 15:45:49.644491811
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+cool-tree.aps:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+cool-parse.o: cool-parse.cc /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h cool-tree.handcode.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h cool.tab.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+source: cool.y cool-tree.handcode.h good.cl bad.cl README myparser mycoolc cool-tree.aps lexer semant cgen lsource
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cool.y:
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-16 00:27:59.972851379
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 66):
+	-${CLASSDIR}/etc/copy-skel ${ASSN} ${SRC}
+
+handle_flags.d: handle_flags.cc Makefile handle_flags.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cgen_gc.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'handle_flags'
+#  Last modified 2025-04-16 15:45:49.674491811
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+good.cl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 66):
+	-${CLASSDIR}/etc/copy-skel ${ASSN} ${SRC}
+
+submit-clean: good.output bad.output
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 78):
+	-rm -f *.s core ${OBJS} ${CGEN} ${HGEN} lexer *~ parser cgen semant
+
+cool-tree.handcode.h:
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-15 22:23:35.003798699
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 66):
+	-${CLASSDIR}/etc/copy-skel ${ASSN} ${SRC}
+
+parser: parser-phase.o utilities.o stringtab.o dumptype.o tree.o cool-tree.o tokens-lex.o handle_flags.o cool-parse.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 44):
+	${CC} ${CFLAGS} ${OBJS} ${LIB} -o parser
+
+clean-compile:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 84):
+	@-rm -f core ${OBJS} ${CGEN} ${HGEN} ${LSRC}
+
+dumptype.o: dumptype.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h cool-tree.handcode.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+lsource: Makefile
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Makefile:
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-15 17:34:06.096551883
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 69):
+	-${CLASSDIR}/etc/link-shared ${ASSN} ${LSRC}
+
+cool-parse.h: cool.y
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 50):
+	bison ${BFLAGS} cool.y
+	mv -f cool.tab.c cool-parse.cc
+
+stringtab.d: stringtab.cc Makefile stringtab.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab_functions.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/stringtab.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stringtab'
+#  Last modified 2025-04-16 15:45:49.844491812
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+utilities.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 81):
+	-rm -f ${OUTPUT} *.s core ${OBJS} ${CGEN} ${HGEN} lexer parser cgen semant *~ *.a *.o 
+
+bad.cl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 66):
+	-${CLASSDIR}/etc/copy-skel ${ASSN} ${SRC}
+
+cool-tree.d: cool-tree.cc Makefile cool-tree.cc /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h cool-tree.handcode.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h cool-tree.handcode.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'cool-tree'
+#  Last modified 2025-04-16 15:45:49.754491811
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+dumptype.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+stringtab.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+bad.output: parser good.cl bad.cl
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	@rm -f ${OUTPUT}
+	./myparser good.cl >good.output 2>&1 
+	-./myparser bad.cl >bad.output 2>&1 
+
+# Not a target:
+/var/tmp/cool/include/PA3/utilities.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/stringtab.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+parser-phase.d: parser-phase.cc Makefile parser-phase.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h cool-tree.handcode.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h /var/tmp/cool/include/PA3/cool-parse.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'parser-phase'
+#  Last modified 2025-04-16 15:45:49.914491813
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+dumptype.d: dumptype.cc Makefile dumptype.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h cool-tree.handcode.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'dumptype'
+ 
+#  Last modified 2025-04-16 15:45:49.814491812
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+tokens-lex.d: tokens-lex.cc Makefile tokens-lex.cc /var/tmp/cool/include/PA3/cool-parse.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tokens-lex'
+#  Last modified 2025-04-16 15:45:49.724491811
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+tree.o: tree.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/tree.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/cool-tree.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+dotest: parser good.cl bad.cl
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 54):
+	@echo "\nRunning parser on good.cl\n"
+	-./myparser good.cl 
+	@echo "\nRunning parser on bad.cl\n"
+	-./myparser bad.cl
+
+tree.d: tree.cc Makefile tree.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tree'
+#  Last modified 2025-04-16 15:45:49.784491812
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+cool-parse.cc: cool.y
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-16 15:45:49.494491809
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 50):
+	bison ${BFLAGS} cool.y
+	mv -f cool.tab.c cool-parse.cc
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+semant:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 60):
+	${CLASSDIR}/etc/link-object ${ASSN} $@
+
+cool-tree.o: cool-tree.cc /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h cool-tree.handcode.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h cool-tree.handcode.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+mycoolc:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+myparser:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+handle_flags.o: handle_flags.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cgen_gc.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+handle_flags.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+# Not a target:
+cool.tab.h:
+#  Implicit rule search has been done.
+#  Last modified 2025-04-16 15:45:49.474491809
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/cool-parse.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/cool.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+ 
+#  Successfully updated.
+
+good.output: parser good.cl bad.cl
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	@rm -f ${OUTPUT}
+	./myparser good.cl >good.output 2>&1 
+	-./myparser bad.cl >bad.output 2>&1 
+
+parser-phase.o: parser-phase.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-tree.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/cool-io.h cool-tree.handcode.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/cool.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h /var/tmp/cool/include/PA3/cool-parse.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cgen:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 60):
+	${CLASSDIR}/etc/link-object ${ASSN} $@
+
+stringtab.o: stringtab.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/stringtab_functions.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/stringtab.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+parser-phase.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-15 23:39:51.777588314
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+# Not a target:
+/var/tmp/cool/include/PA3/stringtab_functions.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+lexer:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 60):
+	${CLASSDIR}/etc/link-object ${ASSN} $@
+
+# Not a target:
+/var/tmp/cool/include/PA3/cgen_gc.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+README:
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 66):
+	-${CLASSDIR}/etc/copy-skel ${ASSN} ${SRC}
+
+tokens-lex.o: tokens-lex.cc /var/tmp/cool/include/PA3/cool-parse.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/cool-io.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+utilities.d: utilities.cc Makefile utilities.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-parse.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'utilities'
+#  Last modified 2025-04-16 15:45:49.884491813
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 87):
+	${SHELL} -ec '${DEPEND} $< | sed '\''s/\($*\.o\)[ :]*/\1 $@ : /g'\'' > $@'
+
+tree.cc:
+#  Implicit rule search has not been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 72):
+	-ln -s ${CLASSDIR}/src/PA${ASSN}/$@ $@
+
+.cc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	${CC} ${CFLAGS} -c $<
+
+utilities.o: utilities.cc /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/copyright.h /var/tmp/cool/include/PA3/cool-parse.h /var/tmp/cool/include/PA3/cool-io.h /var/tmp/cool/include/PA3/tree.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/list.h /var/tmp/cool/include/PA3/stringtab.h /var/tmp/cool/include/PA3/utilities.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/var/tmp/cool/include/PA3/list.h:
+#  Implicit rule search has been done.
+#  Last modified 2019-02-17 11:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=65/1024=6%, Rehash=0, Collisions=30/279=11%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 83 / storage = 1162 B / avg = 14 B
+# current buf: size = 8162 B / used = 1162 B / count = 83 / avg = 14 B
+ 
+
+# strcache performance: lookups = 348 / hit rate = 76%
+# hash-table stats:
+# Load=83/8192=1%, Rehash=0, Collisions=14/348=4%
+# Finished Make data base on Wed Apr 16 15:45:49 2025
+
+ 

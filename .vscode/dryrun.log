@@ -1,0 +1,80 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/root/PA3'
+/var/tmp/cool/etc/copy-skel 3 cool.y cool-tree.handcode.h good.cl bad.cl README
+ 
+cool.y already exists. Skipping cool.y.
+cool-tree.handcode.h already exists. Skipping cool-tree.handcode.h.
+good.cl already exists. Skipping good.cl.
+bad.cl already exists. Skipping bad.cl.
+README already exists. Skipping README.
+bison -d -v -y -b cool --debug -p cool_yy cool.y
+ 
+cool.y: warning: 40 shift/reduce conflicts [-Wconflicts-sr]
+cool.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+
+mv -f cool.tab.c cool-parse.cc
+ 
+/var/tmp/cool/etc/link-shared 3 Makefile
+ 
+Makefile already exists. Skipping Makefile.
+ 
+/var/tmp/cool/etc/copy-skel 3 cool.y cool-tree.handcode.h good.cl bad.cl README
+ 
+cool.y already exists. Skipping cool.y.
+cool-tree.handcode.h already exists. Skipping cool-tree.handcode.h.
+good.cl already exists. Skipping good.cl.
+bad.cl already exists. Skipping bad.cl.
+README already exists. Skipping README.
+ 
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 cool-parse.cc | sed '\''s/\(cool-parse\.o\)[ :]*/\1 cool-parse.d : /g'\'' > cool-parse.d'
+ 
+ln -s /var/tmp/cool/src/PA3/handle_flags.cc handle_flags.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 handle_flags.cc | sed '\''s/\(handle_flags\.o\)[ :]*/\1 handle_flags.d : /g'\'' > handle_flags.d'
+ln -s /var/tmp/cool/src/PA3/tokens-lex.cc tokens-lex.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 tokens-lex.cc | sed '\''s/\(tokens-lex\.o\)[ :]*/\1 tokens-lex.d : /g'\'' > tokens-lex.d'
+ln -s /var/tmp/cool/src/PA3/cool-tree.cc cool-tree.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 cool-tree.cc | sed '\''s/\(cool-tree\.o\)[ :]*/\1 cool-tree.d : /g'\'' > cool-tree.d'
+ln -s /var/tmp/cool/src/PA3/tree.cc tree.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 tree.cc | sed '\''s/\(tree\.o\)[ :]*/\1 tree.d : /g'\'' > tree.d'
+ln -s /var/tmp/cool/src/PA3/dumptype.cc dumptype.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 dumptype.cc | sed '\''s/\(dumptype\.o\)[ :]*/\1 dumptype.d : /g'\'' > dumptype.d'
+ln -s /var/tmp/cool/src/PA3/stringtab.cc stringtab.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 stringtab.cc | sed '\''s/\(stringtab\.o\)[ :]*/\1 stringtab.d : /g'\'' > stringtab.d'
+ln -s /var/tmp/cool/src/PA3/utilities.cc utilities.cc
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 utilities.cc | sed '\''s/\(utilities\.o\)[ :]*/\1 utilities.d : /g'\'' > utilities.d'
+ 
+ln: failed to create symbolic link 'handle_flags.cc': File exists
+make: [Makefile:72: handle_flags.cc] Error 1 (ignored)
+ln: failed to create symbolic link 'tokens-lex.cc': File exists
+make: [Makefile:72: tokens-lex.cc] Error 1 (ignored)
+ln: failed to create symbolic link 'cool-tree.cc': File exists
+make: [Makefile:72: cool-tree.cc] Error 1 (ignored)
+ln: failed to create symbolic link 'tree.cc': File exists
+make: [Makefile:72: tree.cc] Error 1 (ignored)
+ln: failed to create symbolic link 'dumptype.cc': File exists
+make: [Makefile:72: dumptype.cc] Error 1 (ignored)
+ln: failed to create symbolic link 'stringtab.cc': File exists
+make: [Makefile:72: stringtab.cc] Error 1 (ignored)
+ln: failed to create symbolic link 'utilities.cc': File exists
+make: [Makefile:72: utilities.cc] Error 1 (ignored)
+
+ln -s /var/tmp/cool/src/PA3/parser-phase.cc parser-phase.cc
+ 
+ln: failed to create symbolic link 'parser-phase.cc': File exists
+
+make: [Makefile:72: parser-phase.cc] Error 1 (ignored)
+
+/bin/sh -ec 'g++ -MM -I. -I/var/tmp/cool/include/PA3 -I/var/tmp/cool/src/PA3 parser-phase.cc | sed '\''s/\(parser-phase\.o\)[ :]*/\1 parser-phase.d : /g'\'' > parser-phase.d'
+ 
+/var/tmp/cool/etc/copy-skel 3 cool.y cool-tree.handcode.h good.cl bad.cl README
+/var/tmp/cool/etc/copy-skel 3 cool.y cool-tree.handcode.h good.cl bad.cl README
+/var/tmp/cool/etc/copy-skel 3 cool.y cool-tree.handcode.h good.cl bad.cl README
+ln -s /var/tmp/cool/src/PA3/myparser myparser
+ln -s /var/tmp/cool/src/PA3/mycoolc mycoolc
+ 
+ln -s /var/tmp/cool/src/PA3/cool-tree.aps cool-tree.aps
+/var/tmp/cool/etc/link-object 3 lexer
+/var/tmp/cool/etc/link-object 3 semant
+/var/tmp/cool/etc/link-object 3 cgen
+make: Leaving directory '/root/PA3'
+ 
