@@ -58,7 +58,7 @@ int omerrs = 0;               /* number of errors in lexing and parsing */
 %type <formal> formal
 %type <formals> formal_list formal_list_non_empty
 %type <expression> expr
-%type <expressions> expr_list expr_list_non_empty
+%type <expressions> expr_list expr_list_non_empty 
 %type <case_> case
 %type <cases> case_list
 
@@ -82,12 +82,14 @@ class_list
 	;
 
 class
-	: CLASS TYPEID '{' dummy_feature_list '}' ';'
-            { $$ = class_($2, idtable.add_string(const_cast<char*>("Object")), $4,
-                         stringtable.add_string(curr_filename)); }
-	| CLASS TYPEID INHERITS TYPEID '{' dummy_feature_list '}' ';'
-            { $$ = class_($2, $4, $6, stringtable.add_string(curr_filename)); }
-	;
+    : CLASS TYPEID '{' dummy_feature_list '}' ';'
+        { $$ = class_($2, idtable.add_string(const_cast<char*>("Object")), $4,
+                     stringtable.add_string(curr_filename)); }
+    | CLASS TYPEID INHERITS TYPEID '{' dummy_feature_list '}' ';'
+        { $$ = class_($2, $4, $6, stringtable.add_string(curr_filename)); }
+    | CLASS error '{' dummy_feature_list '}' ';'
+        { yyerrok; $$ = class_(idtable.add_string("<error>"), idtable.add_string("Object"), $4,
+                     stringtable.add_string(curr_filename)); }
 
 dummy_feature_list
         : /* empty */               { $$ = nil_Features(); }
@@ -100,10 +102,14 @@ feature_list
         ;
 
 feature
-        : OBJECTID '(' formal_list ')' ':' TYPEID '{' expr '}'   { $$ = method($1, $3, $6, $8); }
-        | OBJECTID ':' TYPEID ASSIGN expr ';'                    { $$ = attr($1, $3, $5); }
-        | OBJECTID ':' TYPEID ';'                                { $$ = attr($1, $3, no_expr()); }
-        ;
+    : OBJECTID '(' formal_list ')' ':' TYPEID '{' expr '}'   
+        { $$ = method($1, $3, $6, $8); }
+    | OBJECTID ':' TYPEID ASSIGN expr ';'                    
+        { $$ = attr($1, $3, $5); }
+    | OBJECTID ':' TYPEID ';'                                
+        { $$ = attr($1, $3, no_expr()); }
+    | error ';' { yyerrok; $$ = attr(idtable.add_string("<error>"), idtable.add_string("Object"), no_expr()); }
+;
 
 formal_list
         : /* empty */               { $$ = nil_Formals(); }
@@ -111,9 +117,9 @@ formal_list
         ;
 
 formal_list_non_empty
-        : formal                           { $$ = single_Formals($1); }
-        | formal_list_non_empty ',' formal { $$ = append_Formals($1, single_Formals($3)); }
-        ;
+    : formal                           { $$ = single_Formals($1); }
+    | formal_list_non_empty ',' formal { $$ = append_Formals($1, single_Formals($3)); }
+    | formal_list_non_empty ',' error  { yyerrok; $$ = $1; };
 
 formal
         : OBJECTID ':' TYPEID       { $$ = formal($1, $3); }
@@ -154,12 +160,12 @@ expr
         | expr '<' expr                   { $$ = lt($1, $3); }
         | expr LE expr                    { $$ = leq($1, $3); }
         | expr '=' expr                   { $$ = eq($1, $3); }
-| OBJECTID '(' expr_list ')'      { $$ = dispatch(object($1), $1, $3); }
-| expr '.' OBJECTID '(' expr_list ')' 
-                                  { $$ = dispatch($1, $3, $5); }
-| expr '@' TYPEID '.' OBJECTID '(' expr_list ')'
-                                  { $$ = static_dispatch($1, $3, $5, $7); }
-
+        | '{' error '}'                   { yyerrok; $$ = block(nil_Expressions()); }
+        | OBJECTID '(' expr_list ')'      { $$ = dispatch(object($1), $1, $3); }
+        | expr '.' OBJECTID '(' expr_list ')' 
+                                          { $$ = dispatch($1, $3, $5); }
+        | expr '@' TYPEID '.' OBJECTID '(' expr_list ')'
+                                          { $$ = static_dispatch($1, $3, $5, $7); }
         ;
 
 case_list
