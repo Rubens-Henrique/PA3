@@ -102,7 +102,7 @@ feature_list
         ;
 
 feature
-    : OBJECTID '(' formal_list ')' ':' TYPEID '{' expr '}'   
+    : OBJECTID '(' formal_list ')' ':' TYPEID '{' expr '}'';'
         { $$ = method($1, $3, $6, $8); }
     | OBJECTID ':' TYPEID ASSIGN expr ';'                    
         { $$ = attr($1, $3, $5); }
