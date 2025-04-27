@@ -140,5 +140,94 @@ Instructions
 
 ---8<------8<------8<------8<---cut here---8<------8<------8<------8<---
 
-Write-up for PA3
-----------------
+## Design Decisions
+O desenvolvimento do parser seguiu uma abordagem modular e incremental, visando garantir clareza, facilidade de depuração e aderência estrita à especificação da linguagem COOL.
+
+As principais decisões de projeto foram:
+
+-Utilização do arquivo cool.y como ponto central do parser
+	O arquivo cool.y foi construído a partir do esqueleto fornecido. As produções já existentes para program e class_list serviram como modelo para o restante das regras gramaticais, o que garantiu consistência com o estilo inicial e integração com a infraestrutura de AST existente.
+
+- Manutenção da ordem lógica e agrupamento de regras
+	As regras foram organizadas por tipo de construção sintática (expressões, instruções de controle, definições de métodos, etc.), facilitando a manutenção e a compreensão do arquivo.
+
+- Uso de precedência e associatividade de operadores
+	Definições de precedência e associatividade foram configuradas para lidar corretamente com expressões aritméticas e booleanas, evitando ambiguidades e reduzindo a necessidade de criar regras auxiliares.
+
+- Tratamento de erros com error tokens
+	Padrões de captura de erros (error) foram inseridos em pontos estratégicos da gramática, permitindo ao parser detectar erros sintáticos comuns e recuperar o processo de parsing sempre que possível. Isso torna o parser mais robusto frente a entradas malformadas.
+
+Essas escolhas foram feitas para maximizar a robustez do parser, reduzir a complexidade do código e garantir facilidade de depuração ao lidar com entradas inválidas.
+
+## Correctness Argument
+A validade do parser foi avaliada de acordo com os seguintes critérios:
+
+- Cobertura das construções da linguagem COOL
+	Todas as formas válidas de expressão, instruções de controle, definições de classes, métodos e atributos foram implementadas conforme descritas na especificação da linguagem.
+
+- Geração correta da Árvore de Sintaxe Abstrata (AST)
+	Cada produção da gramática foi associada diretamente a um nó apropriado da AST, garantindo que a estrutura sintática capturasse todas as informações necessárias para as fases subsequentes do compilador.
+
+- Recuperação adequada de erros
+	O parser foi projetado para reconhecer e reportar múltiplos erros numa mesma execução, em vez de interromper no primeiro erro encontrado. Isso é importante para fornecer feedback completo durante o desenvolvimento de programas.
+
+- Testes extensivos
+	A robustez foi validada por meio de um conjunto de testes positivos e negativos (detalhado abaixo), assegurando que tanto a aceitação de programas válidos quanto a rejeição de programas inválidos ocorressem corretamente.
+
+## Adequacy of Test Cases
+O conjunto de testes desenvolvido foi elaborado para cobrir de maneira sistemática e criteriosa todos os aspectos sintáticos da linguagem COOL, tanto no que se refere a construções válidas quanto ao tratamento de erros.
+
+Os testes foram organizados em dois arquivos principais: good.cl e bad.cl.
+
+### Arquivo good.cl
+O arquivo good.cl contém exemplos que exercitam todas as construções legais da linguagem, buscando validar se o parser reconhece corretamente a sintaxe prevista. Entre os elementos testados, destacam-se:
+
+- Definições de classes
+	Testam declarações básicas de classes, heranças entre classes (inherits), e definições de atributos e métodos, assegurando que o parser reconhece diferentes formatos e níveis de complexidade.
+
+- Inicialização de atributos
+ 	Verifica se atributos podem ser corretamente inicializados tanto com valores simples quanto com expressões compostas, garantindo que o parser aceita expressões arbitrárias em contextos de inicialização.
+
+- Definições e chamadas de métodos
+	Testa métodos com diferentes números de parâmetros, chamadas de métodos locais, chamadas estáticas (@) e o uso de SELF_TYPE. Esses testes validam a correta construção da AST para métodos e a gestão de escopos.
+
+- Estruturas de controle de fluxo (if, while, case)
+	Cobre todas as formas de controle de fluxo previstas pela linguagem, incluindo aninhamento de estruturas e blocos opcionais.
+
+- Blocos e expressões let
+	Testa combinações de múltiplas declarações em blocos ({}) e encadeamento de variáveis no let, assegurando a correta interpretação de agrupamentos de instruções.
+
+- Operadores e precedência
+	Avalia a correta associação e precedência entre operadores aritméticos (+, -, *, /), comparativos (<, <=, =) e booleanos (not, isvoid).
+
+- Manipulação de tipos básicos e literais
+	Exercita o reconhecimento e a manipulação de Int, Bool, String, constantes true e false, além de literais de strings e números.
+
+Esses testes confirmam que o parser aceita construções sintaticamente válidas de forma completa e consistente.
+
+### Arquivo bad.cl
+O arquivo bad.cl foi criado para testar a capacidade do parser de identificar e reportar erros sintáticos de forma eficaz. Inclui casos como:
+
+- Omissão de palavras-chave obrigatórias
+	Ex.: falta de fi no if, ausência de in no let, e omissão de {} em blocos.
+
+- Uso incorreto de operadores
+	Ex.: operadores binários aplicados a operandos inválidos ou mal formados.
+
+- Erros em declarações de métodos e atributos
+	Ex.: ausência de tipo de retorno em métodos, parâmetros de métodos mal declarados, ou falta de : na declaração de atributos.
+
+- Chamadas de métodos malformadas
+	Ex.: ausência de parênteses obrigatórios ou número incorreto de argumentos.
+
+- Estruturas de controle incompletas
+	Ex.: case sem todas as ramificações, while sem corpo válido.
+
+- Identificadores e literais inválidos
+	Ex.: uso de caracteres não permitidos em nomes de variáveis e strings mal terminadas.
+
+Cada erro foi planejado para testar tanto a capacidade de detecção imediata quanto a habilidade de recuperação do parser, permitindo a análise de arquivos com múltiplos problemas.
+
+## Desafios Encontrados e Correções Feitas
+
+Durante o desenvolvimento, tivemos alguns desafios, principalmente com as regras de sintaxe. Um erro ocorreu com o uso do ponto e vírgula (;) no final de métodos e classes, que é obrigatório no COOL, mas estava gerando erro no parser. Após revisar as produções no arquivo cool.y, ajustamos para que o ponto e vírgula fosse aceito corretamente. Também enfrentamos dificuldades com o arquivo parser-phase.cc, onde foi necessário declarar uma variável int current para resolver um erro desconhecido, o que demorou mais tempo para ser solucionado, pois não esperávamos precisar modificar esse arquivo. Além disso, tivemos um pouco de dificuldade para compreender alguns arquivos que foram copiados para o diretório, o que demandou mais tempo e análise. Também ajustamos as mensagens de erro para que ficassem mais claras durante os testes, garantindo que o parser tratasse corretamente todos os casos válidos e inválidos da linguagem COOL.
