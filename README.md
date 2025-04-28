@@ -161,7 +161,7 @@ O desenvolvimento do parser seguiu uma abordagem modular e incremental, visando 
 
 As principais decisões de projeto foram:
 
--Utilização do arquivo cool.y como ponto central do parser
+- Utilização do arquivo cool.y como ponto central do parser
 	O arquivo cool.y foi construído a partir do esqueleto fornecido. As produções já existentes para program e class_list serviram como modelo para o restante das regras gramaticais, o que garantiu consistência com o estilo inicial e integração com a infraestrutura de AST existente.
 
 - Manutenção da ordem lógica e agrupamento de regras
