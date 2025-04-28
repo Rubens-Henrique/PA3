@@ -4,21 +4,37 @@ README file for Programming Assignment 3 (C++ edition)
 Your directory should now contain the following files:
 
  Makefile		  -> [course dir]/src/PA3/Makefile
+
  README
+
  cool.y
+
  bad.cl
+ 
  good.cl
+ 
  cool-tree.handcode.h
+ 
  cool-tree.cc		  -> [course dir]/src/PA3/cool-tree.cc
+ 
  cool-tree.aps		  -> [course dir]/src/PA3/cool-tree.aps
+ 
  dumptype.cc		  -> [course dir]/src/PA3/dumptype.cc
+ 
  handle_flags.c           -> [course dir]/src/PA3/handle_flags.cc
+ 
  parser-phase.cc	  -> [course dir]/src/PA3/parser-phase.cc
+ 
  stringtab.cc		  -> [course dir]/src/PA3/stringtab.cc
+ 
  tokens-lex.cc		  -> [course dir]/src/PA3/tokens-lex.cc
+ 
  tree.cc		  -> [course dir]/src/PA3/tree.cc
+ 
  utilities.cc		  -> [course dir]/src/PA3/utilities.cc
+ 
  *.d			  dependency files
+ 
  *.*			  other generated files
 
 The include (.h) files for this assignment can be found in 
@@ -180,30 +196,46 @@ O conjunto de testes desenvolvido foi elaborado para cobrir de maneira sistemát
 Os testes foram organizados em dois arquivos principais: good.cl e bad.cl.
 
 ### Arquivo good.cl
-O arquivo good.cl contém exemplos que exercitam todas as construções legais da linguagem, buscando validar se o parser reconhece corretamente a sintaxe prevista. Entre os elementos testados, destacam-se:
 
-- Definições de classes
-	Testam declarações básicas de classes, heranças entre classes (inherits), e definições de atributos e métodos, assegurando que o parser reconhece diferentes formatos e níveis de complexidade.
+O arquivo good.cl contém exemplos que exercitam todas as construções legais da linguagem COOL, validando se o parser reconhece corretamente a sintaxe prevista. Os testes abrangem desde casos básicos até combinações mais sofisticadas de elementos da linguagem. Entre os aspectos verificados, destacam-se:
+
+- Definições de classes e herança
+
+    Testam declarações de classes, heranças entre classes (inherits), e a correta definição de atributos e métodos, cobrindo diferentes níveis de complexidade.
 
 - Inicialização de atributos
- 	Verifica se atributos podem ser corretamente inicializados tanto com valores simples quanto com expressões compostas, garantindo que o parser aceita expressões arbitrárias em contextos de inicialização.
+ 
+    Verifica se atributos de tipos básicos (Int, Bool, String) podem ser corretamente inicializados tanto com valores simples quanto com expressões compostas.
 
 - Definições e chamadas de métodos
-	Testa métodos com diferentes números de parâmetros, chamadas de métodos locais, chamadas estáticas (@) e o uso de SELF_TYPE. Esses testes validam a correta construção da AST para métodos e a gestão de escopos.
+  
+    Exercita a declaração de métodos com diferentes números de parâmetros, chamadas locais (self), chamadas sobre objetos, e chamadas estáticas utilizando o operador @.
 
-- Estruturas de controle de fluxo (if, while, case)
-	Cobre todas as formas de controle de fluxo previstas pela linguagem, incluindo aninhamento de estruturas e blocos opcionais.
+- Estruturas de controle de fluxo
+  
+    Testa a correta utilização de instruções if-then-else, laços while, e expressões case, incluindo casos de aninhamento e variações de formato.
 
-- Blocos e expressões let
-	Testa combinações de múltiplas declarações em blocos ({}) e encadeamento de variáveis no let, assegurando a correta interpretação de agrupamentos de instruções.
+- Expressões let e blocos
+  
+    Avalia a criação de variáveis locais com let-in e o agrupamento de múltiplas instruções dentro de blocos ({}).
 
 - Operadores e precedência
-	Avalia a correta associação e precedência entre operadores aritméticos (+, -, *, /), comparativos (<, <=, =) e booleanos (not, isvoid).
+  
+    Valida expressões com operadores aritméticos (+, -, *, /), comparativos (<, <=, =), e booleanos (not, isvoid), assegurando a aplicação correta das regras de associatividade e precedência.
 
-- Manipulação de tipos básicos e literais
-	Exercita o reconhecimento e a manipulação de Int, Bool, String, constantes true e false, além de literais de strings e números.
+- Operadores unários
+  
+    Testa o uso de operadores unários como ~ (negação aritmética), not (negação booleana) e isvoid em expressões isoladas e compostas.
 
-Esses testes confirmam que o parser aceita construções sintaticamente válidas de forma completa e consistente.
+- Instanciação de objetos
+  
+    Verifica a criação de novos objetos usando a palavra-chave new e o correto vínculo ao tipo instanciado.
+
+- Hereditariedade e expansão de classes
+  
+    Garante que classes filhas podem herdar corretamente atributos e métodos de classes pai, além de permitir a adição de novos atributos.
+
+Esses testes asseguram que o parser lida corretamente com todos os elementos fundamentais da linguagem COOL, mesmo em cenários que combinam múltiplos conceitos em uma única construção.
 
 ### Arquivo bad.cl
 O arquivo bad.cl foi criado para testar a capacidade do parser de identificar e reportar erros sintáticos de forma eficaz. Inclui casos como:
